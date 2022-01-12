@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Plant from '../components/plant/Plant'
+import { APP_CONFIG } from '../utils/config';
 
 export default function Home() {
  
@@ -16,7 +17,7 @@ export default function Home() {
 
   const fetchPlants = async () => {
     setLoading(true);
-    const res = await fetch(`http://plant-tracker-app.test/api/plants`);
+    const res = await fetch(APP_CONFIG.API_URL);
     const data = await res.json();
     processData(data);
   }
@@ -33,13 +34,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <main className={styles.main}>  */}
- 
-      {/* </main> */}
       <Plant plants={plantsArr} />
  
-
-      <footer className={styles.footer}>
+       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
