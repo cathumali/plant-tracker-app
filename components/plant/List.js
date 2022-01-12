@@ -1,5 +1,6 @@
 import React from 'react'; 
 import Image from 'next/image'
+import parse from 'html-react-parser';
 
 export default function List(props) {
   const {
@@ -17,8 +18,7 @@ export default function List(props) {
       <div className="mt-4">
         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{ species }</h3>
         <h2 className="text-gray-900 title-font text-lg font-medium">{ name }</h2>
-        {/* <p className="mt-1"></p> */}
-        { instructions }
+        { parse(instructions) }
       </div>
     </div>
   )
