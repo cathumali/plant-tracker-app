@@ -1,8 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Plant tracker api
+---
+- Homestead setup of API built in laravel:
+  - https://github.com/cathumali/plant-tracker-api
 
 ## Getting Started
-
-First, run the development server:
+- update utils/config.js with the api base url. Ex. http://plant-tracker-api.test
+- run the development server:
 
 ```bash
 npm run dev
@@ -12,23 +16,37 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Plant tracker app
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Tech:
+- Laravel 8+ JSON API backend
+- Frontend:
+    - React (preferable: Next.js, TailwindCSS)
+    - OR; Laravel Blade
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+A simple app comprised of 2 pages:
+- Home page (listing of all plants)
+- Add plant page (a form with the appropriate fields)
 
-## Learn More
+Plants should have the follow attributes:
+- Name (single-line text)
+- Species (single-line text)
+- Watering instructions (multi-line text [preferable: Markdown])
+- Photo (image)
 
-To learn more about Next.js, take a look at the following resources:
+To keep the test simple: 
+- no authentication is required, anyone can publish a plant entry and view all existing entries
+- no requirements for editing or deleting entries
+- no requirements for hosting, however the app should run as expected if cloned and set up locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Further requirements:
+- Backend and frontend solutions should be hosted in seperate Github repos (if decoupled)
+- Show understanding of relevant best practices for each langauge / framework
+- Show understanding of good Git commit message structure, and general branch management
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Links:
+- Laravel: https://laravel.com/
+- Next.js: https://nextjs.org/
+- TailwindCSS: https://tailwindcss.com/
+------------------------------------------
