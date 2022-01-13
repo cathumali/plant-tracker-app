@@ -9,7 +9,6 @@ export default function Layout({ children }) {
         <Head>
             <title>Plan tracker app</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
         </Head>
         <nav className="bg-gray-800">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
