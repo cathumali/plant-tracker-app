@@ -10,7 +10,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Plant tracker api Local set up
+Plant tracker api local set up
 ---
 - Homestead setup of API built in laravel:
   - https://github.com/cathumali/plant-tracker-api
