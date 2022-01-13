@@ -1,11 +1,5 @@
 
-Plant tracker api
----
-- Homestead setup of API built in laravel:
-  - https://github.com/cathumali/plant-tracker-api
-
 ## Getting Started
-- update utils/config.js with the api base url. Ex. http://plant-tracker-api.test
 - run the development server:
 
 ```bash
@@ -15,6 +9,13 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Plant tracker api Local set up
+---
+- Homestead setup of API built in laravel:
+  - https://github.com/cathumali/plant-tracker-api
+- update utils/config.js with the api base url. Ex. http://plant-tracker-api.test
+- run the development server:
 
 Plant tracker app
 ---
