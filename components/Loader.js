@@ -1,7 +1,7 @@
 export default function Loader() {
     return (
       <> 
-        <div className="flex items-center justify-center w-full h-full" style={{height:"70vh"}}>
+        <div id="loader" className="flex items-center justify-center w-full h-full" style={{height:"70vh"}}>
             <div className="flex justify-center items-center space-x-1 text-lg text-gray-700">          
                 <svg fill='none' className="w-6 h-6 animate-spin" viewBox="0 0 32 32" xmlns='http://www.w3.org/2000/svg'>
                     <path clipRule='evenodd'

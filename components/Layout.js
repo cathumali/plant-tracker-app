@@ -1,8 +1,11 @@
 import Link from 'next/link';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loader from './Loader'
 
 export default function Layout({ children }) {
     return (
-      <> 
+      <div className="relative"> 
         <nav className="bg-gray-800">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
@@ -27,13 +30,26 @@ export default function Layout({ children }) {
                 </div>
             </div>
         </nav>
+
         <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
             <div className="container max-w-screen-lg mx-auto">
                 <div className="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                     {children}
                 </div> 
             </div>
-        </div>
-      </>
+        </div> 
+        
+        <ToastContainer 
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+        />
+      </div>
     )
   }

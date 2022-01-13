@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Editor from './Editor'
 import { APP_CONFIG } from '../../utils/config';
 import Layout from '../../components/Layout';
+// import Loader from '../../components/Loader'
 import Router from 'next/router'
 
 const ErrorMessage = () =>{
@@ -67,7 +68,11 @@ export default function Form() {
     }
     fetch(APP_CONFIG.API_URL, requestHeaders).then(res => res.json() ).then(res => {
       if(res?.code == 200) {
-        Router.push('/');
+        Router.push({
+          pathname: '/',
+          query: { save_success: true },
+        })
+
       }else {
         setErrorDisplay(true);
       }
@@ -90,7 +95,7 @@ export default function Form() {
 
   return (
     <Layout>
-      <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+      <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3 ">
         <div className="text-gray-600">
           <p className="font-medium text-lg">Add new plant</p>
           <p>Please fill out all the fields.</p>
@@ -138,15 +143,19 @@ export default function Form() {
               <label className="text-sm font-medium" htmlFor="instructions">Instructions</label>
               <Editor setStateValues={setStateValues} />
             </div>
-            
             <div className="md:col-span-5 text-right">
               <div className="inline-flex items-end">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >Submit</button>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"  >Submit</button>
               </div>
             </div>
           </form>
         </div>
       </div> 
+      <div className="w-full h-full absolute block top-0 left-0 bg-white opacity-75 z-50">
+        <span className="text-green-500 opacity-75 top-1/2 my-0 mx-auto block relative w-0 h-0" >
+          <i className="fas fa-circle-notch fa-spin fa-5x"></i>
+        </span>
+      </div>
     </Layout>
   )
 }
