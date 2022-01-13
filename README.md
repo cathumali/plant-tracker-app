@@ -5,7 +5,7 @@ Plant tracker api
   - https://github.com/cathumali/plant-tracker-api
 
 ## Getting Started
-- update utils/config.js with the api base url. Ex.http://plant-tracker-api.test/
+- update utils/config.js with the api base url. Ex. http://plant-tracker-api.test
 - run the development server:
 
 ```bash
